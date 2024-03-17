@@ -124,7 +124,7 @@ extension LocationsVC: LocationViewDelegate {
         DispatchQueue.main.async {
             self.tableView.isHidden = false
             self.slider.isHidden = false
-            self.slider.isHidden = false
+            self.sliderValue.isHidden = false
             self.tableView.reloadData()
         }
     }
