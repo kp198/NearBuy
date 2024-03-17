@@ -21,6 +21,7 @@ class LocationList {
             self.presenter?.reloadLocationTable()
         }
     }
+    
     init() {
         if let locations = UserDefaults.standard.data(forKey: "locationList"), let locationLsist = try? JSONDecoder().decode([LocationModel].self, from: locations) {
             self.locations = locationLsist

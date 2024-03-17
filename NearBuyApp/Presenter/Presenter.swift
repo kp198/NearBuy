@@ -48,7 +48,7 @@ class Presenter {
         return nil
     }
     
-    func checkForPagination(index: Int) {
+    private func checkForPagination(index: Int) {
         let totalItems = locationsList.totalLocations
         if let location = locationsList.locations, index == location.count - 1, location.count < totalItems {
             let page = "\((index+1)/10+1)" // 10 items per fetch

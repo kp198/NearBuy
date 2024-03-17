@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import WebKit
 
-class LocationsVC: UIViewController, CLLocationManagerDelegate {
+class LocationsVC: UIViewController {
 
     let loader = UIActivityIndicatorView()
     let presenter = Presenter()
@@ -53,34 +53,6 @@ class LocationsVC: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    
-    func checkForLocationPermissions() {
-        
-        locManager.delegate = self
-        // check if location is provided
-        //todo: better API, add alert
-        if CLLocationManager.authorizationStatus() == .denied {
-            print("Pls enable location")
-            let alert = UIAlertController(title: "Pls enable location", message: nil, preferredStyle: .alert)
-            DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-                alert.dismiss(animated: true)
-            })
-            self.present(alert, animated: true)
-        }
-        if
-           !(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-           CLLocationManager.authorizationStatus() ==  .authorizedAlways) {
-            locManager.requestWhenInUseAuthorization()
-        }
-        if let location = locManager.location?.coordinate {
-            presenter.fetchLocationsFromServer(page: "1",lat: "\(location.latitude)", long: "\(location.longitude)")
-        }
-    }
-    
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        checkForLocationPermissions()
-    }
-    
     @objc func sliderValueChanged(_ sender: UISlider) {
         let value = round(sender.value)
         sliderValue.text = "\(value)"
@@ -92,7 +64,7 @@ class LocationsVC: UIViewController, CLLocationManagerDelegate {
 
 extension LocationsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.getLocations()?.count ?? 0
+        return (presenter.getLocations()?.count ?? 0)+1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -101,7 +73,6 @@ extension LocationsVC: UITableViewDelegate, UITableViewDataSource {
         let location = presenter.getLocationAtIndex(index: indexPath.row)
         config.text = location?.name
         config.secondaryText = location?.address
-        config.image = UIImage(named: "test")
         cell.contentConfiguration = config
         return cell
     }
@@ -128,6 +99,30 @@ extension LocationsVC: LocationViewDelegate {
             self.tableView.reloadData()
         }
     }
+}
+
+extension LocationsVC: CLLocationManagerDelegate {
+    func checkForLocationPermissions() {
+        locManager.delegate = self
+        // check if location is provided
+        if CLLocationManager.authorizationStatus() == .denied {
+            let alert = UIAlertController(title: "Pls enable location", message: nil, preferredStyle: .alert)
+            DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
+                alert.dismiss(animated: true)
+            })
+            self.present(alert, animated: true)
+        }
+        if
+           !(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+           CLLocationManager.authorizationStatus() ==  .authorizedAlways) {
+            locManager.requestWhenInUseAuthorization()
+        }
+        if let location = locManager.location?.coordinate {
+            presenter.fetchLocationsFromServer(page: "1",lat: "\(location.latitude)", long: "\(location.longitude)")
+        }
+    }
     
-    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkForLocationPermissions()
+    }
 }
