@@ -14,7 +14,8 @@ class NetworkLayer {
         if let url = urlComp?.url {
             URLSession.shared.dataTask(with:URLRequest(url: url) , completionHandler: {
                 data, resp, error in
-                if let data = data,let decodedData = try? JSONDecoder().decode(Venues.self, from: data) {
+                
+                if error == nil, let statusCode = (resp as? HTTPURLResponse)?.statusCode, (statusCode >= 200 && statusCode <= 299) ,let data = data,let decodedData = try? JSONDecoder().decode(Venues.self, from: data) {
                     completion(decodedData.venues, decodedData.meta)
                 }
             }).resume()

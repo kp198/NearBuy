@@ -109,8 +109,8 @@
             filePath = "NearBuyApp/Presenter/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "checkForPagination(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -125,25 +125,9 @@
             filePath = "NearBuyApp/Presenter/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "checkForPagination(index:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2F46F466-1A1F-4043-89D7-EF0DB8DC60E3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NearBuyApp/Presenter/Presenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "reloadLocationTable()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -157,8 +141,8 @@
             filePath = "NearBuyApp/Presenter/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "fetchLocationsFromServer(page:lat:long:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -173,8 +157,8 @@
             filePath = "NearBuyApp/Presenter/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "fetchLocationsFromServer(page:lat:long:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -262,14 +246,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EEBFA8E0-073A-471D-BAB9-5327972C291D"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearBuyApp/NetworkLayer/NetworkLayer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "fetchLocationsFromServer(lat:long:page:distance:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -278,14 +262,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6C073D3E-A630-4A8B-8D52-A44BFD4AE2E2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearBuyApp/Presenter/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "fetchLocationsFromServer(page:lat:long:)"
             landmarkType = "7">
             <Locations>
@@ -326,16 +310,94 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "21532558-9686-4D99-8EC2-E5B79500E75D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearBuyApp/Presenter/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "fetchLocationsFromServer(page:lat:long:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03FDE33C-788E-4FD8-A483-797C4B6CB9A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NearBuyApp/NetworkLayer/NetworkLayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "fetchLocationsFromServer(lat:long:page:distance:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "03FDE33C-788E-4FD8-A483-797C4B6CB9A6 - 2274355e44812c11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NearBuyApp.NetworkLayer.fetchLocationsFromServer(lat: Swift.String, long: Swift.String, page: Swift.String, distance: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;NearBuyApp.LocationModel&gt;&gt;, NearBuyApp.Meta) -&gt; ()) -&gt; ()"
+                  moduleName = "NearBuyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keerthika.priya/Desktop/NearBuyApp/NearBuyApp/NetworkLayer/NetworkLayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "03FDE33C-788E-4FD8-A483-797C4B6CB9A6 - 2274355e44812c11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NearBuyApp.NetworkLayer.fetchLocationsFromServer(lat: Swift.String, long: Swift.String, page: Swift.String, distance: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;NearBuyApp.LocationModel&gt;&gt;, NearBuyApp.Meta) -&gt; ()) -&gt; ()"
+                  moduleName = "NearBuyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keerthika.priya/Desktop/NearBuyApp/NearBuyApp/NetworkLayer/NetworkLayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "03FDE33C-788E-4FD8-A483-797C4B6CB9A6 - 2274355e44812c11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NearBuyApp.NetworkLayer.fetchLocationsFromServer(lat: Swift.String, long: Swift.String, page: Swift.String, distance: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;NearBuyApp.LocationModel&gt;&gt;, NearBuyApp.Meta) -&gt; ()) -&gt; ()"
+                  moduleName = "NearBuyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keerthika.priya/Desktop/NearBuyApp/NearBuyApp/NetworkLayer/NetworkLayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "03FDE33C-788E-4FD8-A483-797C4B6CB9A6 - 2274355e44812c11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NearBuyApp.NetworkLayer.fetchLocationsFromServer(lat: Swift.String, long: Swift.String, page: Swift.String, distance: Swift.String, completion: (Swift.Optional&lt;Swift.Array&lt;NearBuyApp.LocationModel&gt;&gt;, NearBuyApp.Meta) -&gt; ()) -&gt; ()"
+                  moduleName = "NearBuyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keerthika.priya/Desktop/NearBuyApp/NearBuyApp/NetworkLayer/NetworkLayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "976">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

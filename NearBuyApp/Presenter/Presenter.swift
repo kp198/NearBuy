@@ -6,9 +6,7 @@
 //
 
 import Foundation
-protocol View {
-    
-}
+
 class Presenter {
     var locationsList = LocationList()
     let networkLayer = NetworkLayer()
@@ -54,17 +52,18 @@ class Presenter {
         let totalItems = locationsList.totalLocations
         if let location = locationsList.locations, index == location.count - 1, location.count < totalItems {
             let page = "\((index+1)/10+1)" // 10 items per fetch
-            print(page)
             self.fetchLocationsFromServer(page: page)
         }
-    }
-    
-    func reloadLocationTable() {
-        self.locationViewDelegate?.reloadLocationTable()
     }
     
     func setDistance(distance: String) {
         self.locationsList.distance = distance
         fetchLocationsFromServer(page: "1")
+    }
+}
+
+extension Presenter {
+    func reloadLocationTable() {
+        self.locationViewDelegate?.reloadLocationTable()
     }
 }
