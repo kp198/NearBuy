@@ -64,7 +64,7 @@ class LocationsVC: UIViewController {
 
 extension LocationsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (presenter.getLocations()?.count ?? 0)+1
+        return presenter.getLocations()?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

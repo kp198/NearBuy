@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+protocol View {
+    
+}
 class Presenter {
     var locationsList = LocationList()
     let networkLayer = NetworkLayer()
