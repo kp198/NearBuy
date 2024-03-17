@@ -43,8 +43,8 @@ struct Meta: Codable {
 }
 
 struct Geolocation: Codable {
-    var latitude: String?
-    var longitude: String?
+    var lat: String?
+    var lon: String?
 }
 
 struct LocationModel: Codable {
