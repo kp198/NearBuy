@@ -28,9 +28,9 @@ class Presenter {
             let locations = self?.locationsList.locations
             self?.locationsList.locations = locations
             self?.locationsList.totalLocations = meta.total
-            if meta.geolocation.latitude !=  nil && meta.geolocation.longitude != nil {
-                self?.locationsList.latitude = meta.geolocation.latitude
-                self?.locationsList.longitude = meta.geolocation.longitude
+            if let lat = meta.geolocation.lat ,let lon = meta.geolocation.lon {
+                self?.locationsList.latitude = "\(lat)"
+                self?.locationsList.longitude = "\(lon)"
             }
         })
     }
