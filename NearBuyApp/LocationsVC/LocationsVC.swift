@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import WebKit
 
 class LocationsVC: UIViewController, CLLocationManagerDelegate {
 
@@ -105,14 +106,25 @@ extension LocationsVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let urlStr = presenter.getLocationAtIndex(index: indexPath.row)?.url,let url = URL(string: urlStr) {
+            let webview = WKWebView()
+            webview.load(URLRequest(url: url))
+            let vc = UIViewController()
+            vc.view = webview
+            self.present(vc, animated: true)
+        }
+    }
+    
 }
 
 extension LocationsVC: LocationViewDelegate {
     func reloadLocationTable() {
-        self.tableView.isHidden = false
-        self.slider.isHidden = false
-        self.slider.isHidden = false
         DispatchQueue.main.async {
+            self.tableView.isHidden = false
+            self.slider.isHidden = false
+            self.slider.isHidden = false
             self.tableView.reloadData()
         }
     }
